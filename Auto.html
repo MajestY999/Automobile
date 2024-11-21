@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: green;
+    }
+
+    .road {
+        background-color: grey;
+        position: absolute;
+        right: 0px;
+        height: 200px;
+        width: 100%;
+        top: 250px;
+    }
+
+    .car {
+        width: 200px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        border-radius: 25px;
+        top: 300px;
+        animation: 10s infinite linear rotation;
+        right: 200px;
+    }
+
+    .car__roof {
+        width: 100px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+        top: -30px;
+        left: 50px;
+        border-radius: 10px;
+    }
+
+    .car__wheel {
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -15px;
+        animation: 10s infinite linear rotations;
+    }
+
+    .car__wheel_left {
+        left: 20px;
+
+    }
+
+    .car__wheel_right {
+        right: 20px;
+    }
+
+    @keyframes rotation {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(1500px);
+        }
+    }
+
+    @keyframes rotations {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<body>
+    <div class="road"></div>
+    <div class="car">
+        <div class="car__roof"></div>
+        <div class="car__wheel car__wheel_left"></div>
+        <div class="car__wheel car__wheel_right"></div>
+    </div>
+</body>
+
+</html>
